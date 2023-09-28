@@ -2,6 +2,6 @@
 
 set -xe
 
-cd apps/i2pd
+cd Repos/PurpleI2P/i2pd
 
 make
