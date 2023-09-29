@@ -20,4 +20,4 @@ Maintainer: Daniel Hejduk
 Description: I2P: End-to-End encrypted and anonymous Internet
 EOT
 
-dpkg-deb --build BuildScripts/PurpleI2P/i2pd/pkg/
+dpkg-deb --build BuildScripts/PurpleI2P/i2pd/pkg/ BuildScripts/PurpleI2P/i2pd/i2pd.deb
