@@ -11,7 +11,7 @@ touch BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/control
 
 cat <<EOT >> BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/control
 Package: i2pd
-Version: $PKGVER
+Version: $1
 Architecture: $PKGARCH
 Essential: no
 Priority: optional
