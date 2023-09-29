@@ -4,4 +4,4 @@ set -xe
 
 cd Repos/PurpleI2P/i2pd
 
-make
+make -j $(nproc)
