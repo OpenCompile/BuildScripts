@@ -7,7 +7,7 @@ cp Repos/PurpleI2P/i2pd/i2pd BuildScripts/PurpleI2P/i2pd/pkg/usr/bin/.
 
 export PKGARCH=$(dpkg --print-architecture)
 
-touch BuildScripts/$PKGNAME/pkg/DEBIAN/contol
+touch BuildScripts$PKGNAME/pkg/DEBIAN/contol
 
 cat <<EOT >> BuildScripts/$PKGNAME/pkg/DEBIAN/contol
 Package: i2pd
