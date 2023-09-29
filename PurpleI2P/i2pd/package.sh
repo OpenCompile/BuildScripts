@@ -7,9 +7,9 @@ cp Repos/PurpleI2P/i2pd/i2pd BuildScripts/PurpleI2P/i2pd/pkg/usr/bin/.
 
 export PKGARCH=$(dpkg --print-architecture)
 
-touch BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/contol
+touch BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/control
 
-cat <<EOT >> BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/contol
+cat <<EOT >> BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/control
 Package: i2pd
 Version: $PKGVER
 Architecture: $PKGARCH
