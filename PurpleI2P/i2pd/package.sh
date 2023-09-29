@@ -20,4 +20,6 @@ Maintainer: Daniel Hejduk
 Description: I2P: End-to-End encrypted and anonymous Internet
 EOT
 
+chmod -R 0775 BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN
+
 dpkg-deb --build BuildScripts/PurpleI2P/i2pd/pkg/ BuildScripts/PurpleI2P/i2pd/i2pd.deb
