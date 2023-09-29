@@ -7,9 +7,9 @@ cp Repos/PurpleI2P/i2pd/i2pd BuildScripts/PurpleI2P/i2pd/pkg/usr/bin/.
 
 export PKGARCH=$(dpkg --print-architecture)
 
-touch BuildScripts$PKGNAME/pkg/DEBIAN/contol
+touch BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/contol
 
-cat <<EOT >> BuildScripts/$PKGNAME/pkg/DEBIAN/contol
+cat <<EOT >> BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN/contol
 Package: i2pd
 Version: $PKGVER
 Architecture: $PKGARCH
@@ -20,4 +20,4 @@ Maintainer Daniel Hejduk
 Description: I2P: End-to-End encrypted and anonymous Internet
 EOT
 
-dpkg-deb --build BuildScripts/$PKGNAME/pkg/
+dpkg-deb --build BuildScripts/PurpleI2P/i2pd/pkg/
