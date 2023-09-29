@@ -16,7 +16,7 @@ Architecture: $PKGARCH
 Essential: no
 Priority: optional
 Depends: libssl-dev, libboost-all-dev
-Maintainer Daniel Hejduk
+Maintainer: Daniel Hejduk
 Description: I2P: End-to-End encrypted and anonymous Internet
 EOT
 
