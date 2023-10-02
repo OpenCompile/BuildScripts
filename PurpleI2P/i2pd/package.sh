@@ -6,7 +6,7 @@
 mkdir -p BuildScripts/PurpleI2P/i2pd/pkg/DEBIAN
 mkdir -p BuildScripts/PurpleI2P/i2pd/pkg/usr/bin
 
-cp Repos/PurpleI2P/i2pd/i2pd BuildScripts/PurpleI2P/i2pd/pkg/usr/bin/.
+cp Repos/PurpleI2P/i2pd/build/i2pd BuildScripts/PurpleI2P/i2pd/pkg/usr/bin/.
 
 export PKGARCH=$(dpkg --print-architecture)
 
