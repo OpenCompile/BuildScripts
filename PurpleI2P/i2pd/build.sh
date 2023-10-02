@@ -4,5 +4,5 @@ set -xe
 
 cd Repos/PurpleI2P/i2pd/build
 
-cmake -DWITH_STATIC=ON .
+cmake -DCMAKE_BUILD_TYPE=Release .
 make -j $(nproc)
