@@ -1,8 +1,7 @@
 #!/bin/bash
 
-set -xe
+cd Repos/PurpleI2P/i2pd
 
-cd Repos/PurpleI2P/i2pd/build
+debuild --no-tgz-check -us -uc -b
 
-cmake -DCMAKE_BUILD_TYPE=Release .
-make -j $(nproc)
+cd ../../../
