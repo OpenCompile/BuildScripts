@@ -2,7 +2,7 @@
 
 cd Repos/PurpleI2P/i2pd/build
 
-cmake -DWITH_STATIC=ON .
+cmake .
 
 make
 
