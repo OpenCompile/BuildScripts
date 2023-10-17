@@ -8,3 +8,12 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DWITH_CN_LITE=OFF -DWITH_CN_HEAVY=OFF -DWIT
 make -j $(nproc)
 
 cd ../../../../
+
+mkdir Repos/xmrig/xmrig/build/xmrig-opencompile/
+echo "Some Text" > xmrig-opencompile/test && rm -rf xmrig-opencompile
+
+cp Repos/xmrig/xmrig/build/xmrig Repos/xmrig/xmrig/build/xmrig-opencompile/xmrig
+tar -czvf Repos/xmrig/xmrig/build/xmrig.tar.gz Repos/xmrig/xmrig/build/xmrig-opencompile
+
+cp Repos/xmrig/xmrig/build/xmrig.tar.gz TarRepo/tmp/xmrig.tar.gz
+
