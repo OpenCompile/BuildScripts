@@ -15,5 +15,7 @@ echo "Some Text" > xmrig-opencompile/test && rm -rf xmrig-opencompile
 cp Repos/xmrig/xmrig/build/xmrig Repos/xmrig/xmrig/build/xmrig-opencompile/xmrig
 tar -czvf Repos/xmrig/xmrig/build/xmrig.tar.gz Repos/xmrig/xmrig/build/xmrig-opencompile
 
+mkdir -p TarRepo/tmp/
+
 cp Repos/xmrig/xmrig/build/xmrig.tar.gz TarRepo/tmp/xmrig.tar.gz
 
