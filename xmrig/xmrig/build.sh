@@ -9,12 +9,14 @@ make -j $(nproc)
 
 cd ../../../../
 
+mkdir -p TarRepo/tmp/
+
 cp Repos/xmrig/xmrig/build/xmrig .
 
-tar -csvf Repos/xmrig/xmrig/build/xmrig.tar.gz xmrig
+tar -cf xmrig.tar.gz xmrig
 
 rm xmrig
 
-mkdir -p TarRepo/tmp/
+cp xmrig.tar.gz TarRepo/tmp/xmrig.tar.gz
 
-cp Repos/xmrig/xmrig/build/xmrig.tar.gz TarRepo/tmp/xmrig.tar.gz
+rm xmrig.tar.gz
