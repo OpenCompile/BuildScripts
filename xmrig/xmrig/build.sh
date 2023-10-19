@@ -9,10 +9,11 @@ make -j $(nproc)
 
 cd ../../../../
 
-mkdir Repos/xmrig/xmrig/build/xmrig-opencompile/
+cp Repos/xmrig/xmrig/build/xmrig .
 
-cp Repos/xmrig/xmrig/build/xmrig Repos/xmrig/xmrig/build/xmrig-opencompile/xmrig
-tar -csvf Repos/xmrig/xmrig/build/xmrig.tar.gz Repos/xmrig/xmrig/build/xmrig
+tar -csvf Repos/xmrig/xmrig/build/xmrig.tar.gz xmrig
+
+rm xmrig
 
 mkdir -p TarRepo/tmp/
 
