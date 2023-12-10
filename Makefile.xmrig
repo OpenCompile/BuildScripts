@@ -1,0 +1,24 @@
+CC=gcc
+CXX=g++
+CORES=1
+
+ARCH=x86-64
+SYS=default
+VERSION=69
+
+CFLAGS=-DXMRIG_DEPS=scripts/deps -DCMAKE_C_COMPILER=$(CC) -DCMAKE_CXX_COMPILER=$(CXX)
+
+all:
+
+ifeq ($(SYS),alpine)
+	CFLAGS=$(CFLAGS) -DBUILD_STATIC=on
+endif
+	@cd Repos/xmrig/xmrig/scripts; \
+	mkdir -p ../build; \
+	./build_deps.sh && cd ../build; \
+	cmake .. -DXMRIG_DEPS=scripts/deps -DCMAKE_C_COMPILER=$(CC) -DCMAKE_CXX_COMPILER=$(CXX); \
+	make -j$(CORES)
+
+package:
+	mkdir -p TarRepo/xmrig/xmrig/$(VERSION)/
+	cp Repos/xmrig/xmrig/build/xmrig TarRepo/xmrig/xmrig/$(VERSION)/xmrig-$(ARCH) && pwd && cd TarRepo/xmrig/xmrig/$(VERSION) && sha256sum xmrig-$(ARCH) > SHA256SUMS.txt && cd ../../../
