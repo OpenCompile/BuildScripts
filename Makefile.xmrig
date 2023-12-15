@@ -1,3 +1,4 @@
+.ONESHELL:
 CC=gcc
 CXX=g++
 CORES=1
@@ -16,9 +17,16 @@ endif
 	@cd Repos/xmrig/xmrig/scripts; \
 	mkdir -p ../build; \
 	./build_deps.sh && cd ../build; \
-	cmake .. -DXMRIG_DEPS=scripts/deps -DCMAKE_C_COMPILER=$(CC) -DCMAKE_CXX_COMPILER=$(CXX); \
+	cmake .. $(CFLAGS); \
 	make -j$(CORES)
 
 package:
 	mkdir -p TarRepo/xmrig/xmrig/$(VERSION)/
 	cp Repos/xmrig/xmrig/build/xmrig TarRepo/xmrig/xmrig/$(VERSION)/xmrig-$(ARCH) && pwd && cd TarRepo/xmrig/xmrig/$(VERSION) && sha256sum xmrig-$(ARCH) > SHA256SUMS.txt && cd ../../../
+ifeq ($(VERSION),69)
+	rm -rf Repos/xmrig/xmrig/69
+	@echo "Please set the VERSION Variable"
+endif
+
+pull:
+	git clone https://github.com/xmrig/xmrig.git Repos/xmrig/xmrig
