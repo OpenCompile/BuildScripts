@@ -17,7 +17,7 @@ all:
 
 package:
 	mkdir -p TarRepo/xmrig/xmrig/$(VERSION)/
-	cp Repos/xmrig/xmrig/build/xmrig TarRepo/xmrig/xmrig/$(VERSION)/xmrig-$(ARCH) && pwd && cd TarRepo/xmrig/xmrig/$(VERSION) && sha256sum xmrig-$(ARCH) > SHA256SUMS.txt && cd ../../../
+	cp Repos/xmrig/xmrig/build/xmrig TarRepo/xmrig/xmrig/$(VERSION)/xmrig-$(ARCH) && pwd && cd TarRepo/xmrig/xmrig/$(VERSION) && sha256sum xmrig-$(ARCH) >> SHA256SUMS.txt && cd ../../../
 ifeq ($(VERSION),69)
 	rm -rf Repos/xmrig/xmrig/69
 	@echo "Please set the VERSION Variable"

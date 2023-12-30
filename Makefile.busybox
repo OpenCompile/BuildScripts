@@ -1,0 +1,18 @@
+.ONESHELL:
+CC=gcc
+CORES=1
+
+ARCH=x86-64
+VERSION=69
+
+all:
+	@cd Repos/busybox; \
+    make -j$(CORES) CC=$(CC)
+
+package:
+	mkdir -p TarRepo/busybox/$(VERSION)/
+	cp Repos/busybox/busybox TarRepo/busybox/$(VERSION)/busybox-$(ARCH) && pwd && cd TarRepo/busybox/$(VERSION) && sha256sum busybox-$(ARCH) >> SHA256SUMS.txt && cd ../../../
+ifeq ($(VERSION),69)
+	rm -rf Repos/busybox/69
+	@echo "Please set the VERSION Variable"
+endif
